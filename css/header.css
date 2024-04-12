@@ -60,6 +60,7 @@
     font-weight: bold;
     text-decoration: none;
     transition: color 0.35s;
+    font-family: 'Roboto Slab';
 }
 
 #menu ul li a:hover {

@@ -31,13 +31,12 @@
     width: 18px;
     border: none;
     cursor: pointer;
-    margin-bottom: 8px;
+    margin: 3px;
 }
 
 .header-white{
     padding-bottom: 23px;
 }
-
 
 #menu {
     font-family: 'Heebo', serif;

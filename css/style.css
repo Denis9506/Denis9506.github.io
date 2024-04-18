@@ -91,12 +91,13 @@ a{
     color: #324950;
 }
 
-
+.bg{
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
 #slider {
     text-align: center;
     padding: 338px 0;
-    margin-top: -135px;
-    background: url(../images/bg.jpg) no-repeat center;
 }
 
 #slider h1 {
@@ -201,7 +202,9 @@ a{
     line-height: 147.7%;
     margin: 0;
 }
-
+.minus30{
+    margin-bottom: -30px;
+}
 .seeds {
     display: flex;
     justify-content: center;
@@ -228,38 +231,6 @@ a{
 img {
     max-width: 100%;
     height: auto;
-}
-
-@media only screen and (max-width: 768px) {
-    .w-2 {
-        width: 100%;
-    }
-
-    .align-right {
-        text-align: center;
-    }
-    #logo{
-        text-align: center;
-    }
-    #search {
-        margin: 0;
-        max-width: 100%;
-    }
-
-    #search input {
-        max-width: 100%;
-    }
-
-    .social {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-    }
-
-    #links ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
 }
 
 #slider-img {
@@ -335,10 +306,35 @@ img {
      margin: 0;
      width: 100%;
  }
-
-td {
-    padding: 23px;
+ 
+ .tomato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px
 }
+
+.tomato a{
+    display: contents;
+}
+
+.tomato img {
+    max-width: 92%;
+    height: auto;
+}
+
+.tomato p{
+    text-align: center;
+    color: #57984C;
+    background-color: #fff;
+    margin: 0;
+    width: 92%;
+}
+
+.tomato p a{  
+    color: #57984C;
+}
+
 .back-tomatoall a {
     font-size: 14px;
     color: #57984C;
@@ -472,9 +468,6 @@ td {
     flex-direction: row;
     justify-content: space-between;
 }
-.contact-colum1{
-    width: 35%;
-}
 
 .flex-contact-main .contact-column:first-child{
     width: 30%;
@@ -552,3 +545,14 @@ input[type=submit]{
     width: 26%;
     font-size: 20px;
 }
+
+
+
+.wrapper-tomato {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1127px;
+    width:100%;
+    margin:0 auto;
+}
+

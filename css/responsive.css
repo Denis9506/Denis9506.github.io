@@ -33,9 +33,19 @@
         max-width: 100%;
     }
 
-    #menu{
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    #menu {
         display: none;
         justify-content: center;
+        animation: slideIn 0.5s forwards;
     }
     
     #slider h1{
@@ -57,7 +67,7 @@
         cursor: pointer;
     }
     #burger-btn span{
-        transform: scale(1);
+    transform: scale(1);
       background-color: black;
       width: 80%;
       height: 2px;

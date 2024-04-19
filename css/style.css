@@ -546,10 +546,9 @@ input[type=submit]{
     font-size: 20px;
 }
 
-
-
 .wrapper-tomato {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 1127px;
     width:100%;

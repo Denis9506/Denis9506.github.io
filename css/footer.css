@@ -46,7 +46,9 @@
     bottom: 0;
     width: 100%;
 }
-
+.footer p {
+    padding: 0 10px;
+}
 
 @media screen and (max-width: 1175px) {
     .footer-content {

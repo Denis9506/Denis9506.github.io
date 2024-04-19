@@ -106,7 +106,7 @@
     }
 
     .description{
-        padding: 45px 20px;
+        padding: 45px 15px;
     }
 
     .item-white-list {
@@ -120,11 +120,11 @@
     }
 
     .bg-tomato{
-        padding: 0 50px;
+        padding: 0 15px;
     }
     
     .bg_grey .wrapper{
-        max-width: 70%;
+        max-width: 80%;
     }
 
     .flex-contact-main{
@@ -141,6 +141,16 @@
         width: 100%;
         margin-bottom: 20px;
     }
+    .vision-container{
+        flex-direction: column
+    }
+    .mission-container{
+        flex-direction: column-reverse;
+    }
+    .centered-image{
+        width: 30%;
+         height: 30%;
+    }
     
 }
 
@@ -148,22 +158,31 @@
 /* all */
 @media only screen and (max-width: 800px) {
     .text{
-        font-size: 0.7em;
+        font-size: 1.2em;
+        text-align: center;
     }
      .title{
         font-size: 2.5em;
+    }
+    .text-content-decoration{
+        text-align: center;
     } 
     .text-content-label{
+        text-align: center;
         font-size: 1.8em;
     }
     .align-right {
         text-align: center;
     }
     .middle{
-        padding: 78px 20px;
+        padding: 78px 15px;
+    }
+    .text-contact-title{
+        text-align: center;
     }
     .text-content-main{
         font-size: 15px;
+        text-align: center;
     }
     .subtitle{
         font-size: 1.2em;
@@ -171,7 +190,7 @@
     }
 
     #search input {
-        max-width: 100%;
+        max-width: 90%;
     }
     .submit-flex{
         flex-direction: column;
@@ -202,16 +221,34 @@
     }
     #categories{
         padding: 0;
-        margin: 0;
+        padding-bottom: 20px;
     }
     #categories .row{
-        display:flex;
         flex-direction: column;
         align-items: center;
     }
     #categories .row .w-7{
-        margin-top: 15px;
+        margin-top: 20px;
+        width: 100%;
     }
+    #categories .row .w-7 a img{
+        width: 15%;
+        height: auto;
+    }
+    #categories #min{
+        width: 8%;
+        height: auto;
+    }
+    .text-category{
+        margin: 0;
+    }
+    .w-7 img{
+        height: 70%;
+        width: 70%;
+    }
+    
+    
+
 }
 /* tomato one */
 @media screen and (max-width: 1000px) {
@@ -262,5 +299,8 @@
    }
    .seeds .w-3{
     margin-top: 10px;
-   } 
+   }
+   .w-3{
+    width: 70%;
+    }
 } 

@@ -9,6 +9,7 @@
     .w-2 {
         width: 100%;
     }
+    .text-content-decoration,
     .align-right {
         text-align: center;
     }
@@ -151,7 +152,6 @@
         width: 30%;
          height: 30%;
     }
-    
 }
 
 
@@ -164,7 +164,8 @@
      .title{
         font-size: 2.5em;
     }
-    .text-content-decoration{
+    .text-content-decoration-grapefruit,
+    .text-content-decorati0on{
         text-align: center;
     } 
     .text-content-label{
@@ -211,7 +212,7 @@
 }
 
 /*  index categories */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 710px) {
 
     .content-tomatoone h1{
         font-size: 30px;
@@ -255,7 +256,9 @@
     .content-tomatoone {
         flex-direction: column;
     }
-
+    .text{
+        font-size: 1em;
+    }
     .text-right-tomato {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -277,7 +280,12 @@
     .img-tomato{
         width: 70%;
     }
-
+    .flex-desc{
+        flex-direction: column;
+    }
+    .desc{
+        width: 100%;
+    }
     .content-tomatoone .w-2 {
         width: 100%;
         margin-bottom: 30px;

@@ -53,62 +53,71 @@
             <div class="wrapper">
                 <h1 class="text-contact-title">Contact us</h1>
                 <p class="text-content-decoration">×××××</p>
+                <div id="grapefruit-app">
+                    <div v-if="cartVisible">
+                      <div class="cart-item" v-for="item in product">
+                        <div class="w-4"><img v-bind:src="item.image" alt="item.title"></div>
+                        <div class="w-4 color-grapefruit">{{item.title}}</div>
+                        <div class="w-4">{{item.short_text}}</div>
+                        <div class="w-4" @click.prevent="removeFromCart(item.id)"><button class="btn-no-style">×</button></div>
+                      </div>
+                    </div>
 
-                <form action="#">
+                <form @submit.prevent="makeOrder">
                     <div class="flex-contact-main">
                         <div class="contact-column">
                             <div class="item-flex">
                                 <label for="iname">Name *</label>
-                                <input type="text" name="iname" id="name" required />
+                                <input type="text" name="iname" id="name"  v-model="contactFields.name" required />
                             </div>
                             <div class="item-flex">
                                 <label for="icomp">Company Name *</label>
-                                <input type="text" name="icomp" id="comp" required />
+                                <input type="text" name="icomp" id="comp"  v-model="contactFields.companyName" required />
                             </div>
                             <div class="item-flex">
                                 <label for="ipos">Position *</label>
-                                <input type="text" name="ipos" id="pos" required />
+                                <input type="text" name="ipos" id="pos"  v-model="contactFields.position" required />
                             </div>
                             <div class="item-flex">
                                 <label for="icity">City *</label>
-                                <input type="text" name="icity" id="city" required />
+                                <input type="text" name="icity" id="city"  v-model="contactFields.city" required />
                             </div>
                             <div class="item-flex">
                                 <label for="icountry">Country *</label>
-                                <input type="text" name="icountry" id="Country" required />
+                                <input type="text" name="icountry" id="Country"  v-model="contactFields.country" required />
                             </div>
                             <div class="item-flex">
                                 <label for="itel">Telephone *</label>
-                                <input type="text" name="itel" id="tel" required />
+                                <input type="text" name="itel" id="tel"  v-model="contactFields.telephone" required />
                             </div>
                             <div class="item-flex">
                                 <label for="iemail">Email *</label>
-                                <input type="email" name="iemail" id="email" required />
+                                <input type="email" name="iemail" id="email"  v-model="contactFields.email" required />
                             </div>
                         </div>
                         <div class="contact-column">
                             <div class="item-flex">
                                 <label for="iselect">You are a *</label>
-                                <select name="iselect" id="select" required>
-                                    <option value="">None</option>
-                                    <option value="seedp">seed producer</option>
-                                    <option value="seedb">seed buyer</option>
-                                    <option value="seeds">seed seller</option>
+                                <select name="iselect" id="select" v-model="contactFields.youAre" required>
+                                    <option disabled value="">None</option>
+                                    <option value="seed_producer">seed producer</option>
+                                    <option value="seed_buyer">seed buyer</option>
+                                    <option value="seeds_seller">seed seller</option>
                                 </select>
                             </div>
                             <div class="item-flex">
                                 <label for="iselect">If other, please specify</label>
-                                <input type="text" name="iselect" id="select" />
+                                <input type="text" name="iselect" id="select"  v-model="contactFields.otherSpecify"  />
                             </div>
                             <div class="item-flex">
                                 <label for="iarea">You are interested in</label>
-                                <textarea name="iarea" id="area" cols="30" rows="16" required></textarea>
+                                <textarea name="iarea" id="area" cols="30" rows="16"  v-model="contactFields.interested" required></textarea>
                             </div>
                             <div class="item-flex">
                                 <label for="i">Please type this code</label>
                                 <div class="submit-flex">
                                     <img src="../images/капча.PNG" alt="captcha" />
-                                    <input type="text" name="icaptcha" id="captcha" required />
+                                    <input type="text" name="icaptcha" id="captcha" required  v-model="contactFields.capcha"/>
                                     <input type="submit" value="Send Message" />
                                 </div>
                             </div>
@@ -153,5 +162,7 @@
             <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
         </div>
         <script src="../js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="../js/mainvue.js"></script>
     </body>
 </html>

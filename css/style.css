@@ -571,3 +571,41 @@ input[type=submit]{
 .desc{
     width: 45%;
 }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .cart-item > div {
+    flex: 1;
+  }
+  
+  .cart-item img {
+    width: 80px; 
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .btn-no-style {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ebad57;
+    font-size: 3em;
+
+  }
+  
+  .btn-no-style:hover {
+    color: #8b6024;
+  }
+  
+  .color-grapefruit{
+    color: #ebad57;
+  }

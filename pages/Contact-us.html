@@ -63,7 +63,7 @@
                       </div>
                     </div>
 
-                <form @submit.prevent="makeOrder">
+                <form @submit.prevent="makeOrder" v-if="formVisible">
                     <div class="flex-contact-main">
                         <div class="contact-column">
                             <div class="item-flex">
@@ -124,6 +124,21 @@
                         </div>
                     </div>
                 </form>
+                
+            <div v-if="!formVisible"  class="container">
+                <h2>Contact Information</h2>
+                <p><label>Name:</label> {{contactFields.name}}</p>
+                <p><label>Company Name:</label> {{contactFields.companyName}}</p>
+                <p><label>Position:</label> {{contactFields.position}}</p>
+                <p><label>City:</label> {{contactFields.city}}</p>
+                <p><label>Country:</label> {{contactFields.country}}</p>
+                <p><label>Telephone:</label> {{contactFields.telephone}}</p>
+                <p><label>Email:</label> {{contactFields.email}}</p>
+                <p><label>You are a:</label> {{contactFields.youAre}}</p>
+                <p><label>Other specify:</label> {{contactFields.otherSpecify}}</p>
+                <p><label>Interested in:</label> {{contactFields.interested}}</p>
+                <p><label>Captcha:</label> {{contactFields.capcha}}</p>
+              </div>
             </div>
         </div>
 
